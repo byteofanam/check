@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.logo > img {
+  width: 100px;
+  height: 100px;
+}
+
+.header {
+  background-color: #f0f0f0;
+  border: 2px solid #000;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+ul {
+  gap: 10px;
+  padding: 5px;
+  list-style: none;
+  display: flex;
+}
+
+input {
+  background-color: #e7d6dc;
+  border-radius: 5px;
+  width: 300px;
+  height: 30px;
+  margin: 5px;
+  padding: 5px;
+}
+
+button {
+  color: #fff;
+  cursor: pointer;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  width: 80px;
+  height: 40px;
+}
+
+.restroImg {
+  border: 2px solid #000;
+  flex-direction: column;
+  width: fit-content;
+  margin: 5px;
+  padding: 5px;
+  display: flex;
+}
+
+.restroImg > img {
+  width: 150px;
+  height: 240px;
+}
+/*# sourceMappingURL=new revision.3a01df49.css.map */
