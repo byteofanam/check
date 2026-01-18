@@ -796,7 +796,9 @@ const Header = ()=>{
     }, undefined);
 };
 _c = Header;
-const Foodtemplates = ()=>{
+//destructuring on the fly
+const Foodtemplates = (props)=>{
+    const { resData } = props;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "restroImg",
         style: {
@@ -809,38 +811,128 @@ const Foodtemplates = ()=>{
                 src: "https://imgs.search.brave.com/Tbpa832JNmU4Q2Yfau6MGO8wt44_0MnVCKaLbPXdPvY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3N5c3RlbS9y/ZXNvdXJjZXMvdGh1/bWJuYWlscy8wMzMv/MzIwLzA4OC9zbWFs/bC9iZWxnaXVtLXdh/ZmZsZS13aXRoLWlj/ZS1jcmVhbS1haS1n/ZW5lcmF0aXZlLXBo/b3RvLmpwZw"
             }, void 0, false, {
                 fileName: "script.js",
-                lineNumber: 29,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "Belgium waffle"
-            }, void 0, false, {
-                fileName: "script.js",
-                lineNumber: 30,
-                columnNumber: 13
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                children: "Near Shyam plaza"
-            }, void 0, false, {
-                fileName: "script.js",
                 lineNumber: 31,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: resData.info.name
+            }, void 0, false, {
+                fileName: "script.js",
+                lineNumber: 32,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: resData.info.cuisines
+            }, void 0, false, {
+                fileName: "script.js",
+                lineNumber: 33,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                children: resData.info.locality
+            }, void 0, false, {
+                fileName: "script.js",
+                lineNumber: 34,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                 children: "4.5kms"
             }, void 0, false, {
                 fileName: "script.js",
-                lineNumber: 32,
+                lineNumber: 35,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "script.js",
-        lineNumber: 28,
+        lineNumber: 30,
         columnNumber: 9
     }, undefined);
 };
 _c1 = Foodtemplates;
+const resObj = {
+    info: {
+        id: "385824",
+        name: "The Belgian Waffle Co.",
+        cloudinaryImageId: "RX_THUMBNAIL/IMAGES/VENDOR/2025/1/17/a38d20d7-bbb7-4b67-8bdd-7740e85cd4af_385824.JPG",
+        locality: "Sinchai Colony",
+        areaName: "Mohan Nagar",
+        costForTwo: "\u20B9200 for two",
+        cuisines: [
+            "Waffle",
+            "Desserts",
+            "Ice Cream",
+            "Beverages"
+        ],
+        avgRating: 4.6,
+        veg: true,
+        parentId: "2233",
+        avgRatingString: "4.6",
+        totalRatingsString: "351",
+        sla: {
+            deliveryTime: 60,
+            lastMileTravel: 13.4,
+            serviceability: "SERVICEABLE",
+            slaString: "55-65 mins",
+            lastMileTravelString: "13.4 km",
+            iconType: "ICON_TYPE_EMPTY"
+        },
+        availability: {
+            nextCloseTime: "2026-01-18 22:45:00",
+            opened: true
+        },
+        badges: {
+            imageBadges: [
+                {
+                    imageId: "v1695133679/badges/Pure_Veg111.png",
+                    description: "pureveg"
+                }
+            ]
+        },
+        isOpen: true,
+        aggregatedDiscountInfoV2: {},
+        type: "F",
+        badgesV2: {
+            entityBadges: {
+                imageBased: {
+                    badgeObject: [
+                        {
+                            attributes: {
+                                description: "pureveg",
+                                imageId: "v1695133679/badges/Pure_Veg111.png"
+                            }
+                        }
+                    ]
+                },
+                textBased: {},
+                textExtendedBadges: {}
+            }
+        },
+        differentiatedUi: {
+            displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            differentiatedUiMediaDetails: {
+                lottie: {},
+                video: {}
+            }
+        },
+        reviewsSummary: {},
+        displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        restaurantOfferPresentationInfo: {},
+        externalRatings: {
+            aggregatedRating: {
+                rating: "--"
+            }
+        },
+        ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    analytics: {
+        context: "seo-data-172ec494-5426-4bb1-a313-3ad541926162"
+    },
+    cta: {
+        link: "https://www.swiggy.com/city/chhindwara/the-belgian-waffle-co-sinchai-colony-mohan-nagar-rest385824",
+        type: "WEBLINK"
+    }
+};
 const Body = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body",
@@ -853,80 +945,40 @@ const Body = ()=>{
                         placeholder: "Search Restaurant Name"
                     }, void 0, false, {
                         fileName: "script.js",
-                        lineNumber: 40,
+                        lineNumber: 126,
                         columnNumber: 17
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         children: "Search"
                     }, void 0, false, {
                         fileName: "script.js",
-                        lineNumber: 41,
+                        lineNumber: 127,
                         columnNumber: 17
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "script.js",
-                lineNumber: 39,
+                lineNumber: 125,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "foodTemplate",
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 44,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 45,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 46,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 47,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 48,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 49,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 50,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 51,
-                        columnNumber: 17
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {}, void 0, false, {
-                        fileName: "script.js",
-                        lineNumber: 52,
-                        columnNumber: 17
-                    }, undefined)
-                ]
-            }, void 0, true, {
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Foodtemplates, {
+                    resData: resObj
+                }, void 0, false, {
+                    fileName: "script.js",
+                    lineNumber: 130,
+                    columnNumber: 17
+                }, undefined)
+            }, void 0, false, {
                 fileName: "script.js",
-                lineNumber: 43,
+                lineNumber: 129,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "script.js",
-        lineNumber: 38,
+        lineNumber: 124,
         columnNumber: 9
     }, undefined);
 };
@@ -936,12 +988,12 @@ const AppLayout = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "script.js",
-                lineNumber: 60,
+                lineNumber: 146,
                 columnNumber: 9
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Body, {}, void 0, false, {
                 fileName: "script.js",
-                lineNumber: 61,
+                lineNumber: 147,
                 columnNumber: 9
             }, undefined)
         ]
@@ -951,7 +1003,7 @@ _c3 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "script.js",
-    lineNumber: 66,
+    lineNumber: 152,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3;
